@@ -160,6 +160,86 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
     }
+
+    .navbar {
+        letter-spacing: 3px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
+
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .navbar-links a,
+    .navbar-links p {
+        color: rgba(0, 0, 0, 0.664);
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 16px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 28px;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            justify-content: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 16px;
+            background: #fffbe6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: none;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 613px) {
+    img[src="Group 578.png"] {
+        width: 350px !important;
+        padding-left: 0 !important;
+    }
+    }
+
 </style>
 
 <script>
@@ -170,6 +250,10 @@
     function closeZoom() {
         document.getElementById('zoomModal').classList.remove('active');
         document.getElementById('zoomedImg').src = '';
+    }
+    function toggleMenu() {
+        var links = document.getElementById('navbarLinks');
+        links.classList.toggle('active');
     }
 </script>
 
@@ -184,15 +268,22 @@
 
     <br>
     <div style=" position: relative;">
-        <div style=" letter-spacing: 3px; font-weight: bold; display: flex; justify-content: space-around;">
-            <a href="#" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">HOME</a>
-            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
-            <a href="#project" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">PROJECT</a>
-            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
-            <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">RESUME</a>
-            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
-            <a href="#abt" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">CONTACT</a>
-        </div>
+        <nav class="navbar">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-links" id="navbarLinks">
+                <a href="#">HOME</a>
+                <p>|</p>
+                <a href="#project">PROJECT</a>
+                <p>|</p>
+                <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank">RESUME</a>
+                <p>|</p>
+                <a href="#abt">CONTACT</a>
+            </div>
+        </nav>
 
         <div
             style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
