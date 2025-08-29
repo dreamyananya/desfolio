@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Website Concept Reimagined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Reem+Kufi:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Ellipse 221.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Reem Kufi", sans-serif;
+        font-style: normal;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url(Download\ premium\ image\ of\ Paper\ texture\ mobile\ wallpaper\,\ simple\ background\ by\ mook\ about\ instagram\ story\ plain\ background\,\ beige\ minimalist\ wallpaper\,\ plain\ cream\ background\,\ minimalist\ iphone\ wallpaper\,\ and\ instagr.jfif);
+        background-position: center;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 25px;
+    }
+
+    .tx {
+        font-family: "Give You Glory", cursive;
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .collage {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 40px auto;
+    }
+
+    .collage img {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.2s;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    .img-container {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .img1 {
+        top: 20px;
+        left: 0px;
+        transform: rotate(-8deg);
+    }
+
+    .img2 {
+        top: 60px;
+        left: 100px;
+        transform: rotate(6deg);
+    }
+
+    .img3 {
+        top: 140px;
+        left: 100px;
+        transform: rotate(-4deg);
+    }
+
+    .img4 {
+        top: 100px;
+        left: 200px;
+        transform: rotate(10deg);
+    }
+
+    .img5 {
+        top: 150px;
+        left: 100px;
+        transform: rotate(-7deg);
+    }
+
+    .img6 {
+        top: 180px;
+        left: 250px;
+        transform: rotate(3deg);
+    }
+
+    .flex-collage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        margin: 40px auto;
+        max-width: 900px;
+    }
+
+    .img-box {
+        position: relative;
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+    }
+
+    /* Zoom button top left */
+    .zoom-btn {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.95;
+        z-index: 2;
+    }
+
+    /* Zoom modal styles */
+    .zoom-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .zoom-modal.active {
+        display: flex;
+    }
+
+    .zoom-modal img {
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        background: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+</style>
+
+<script>
+    function zoomImage(src) {
+        document.getElementById('zoomedImg').src = src;
+        document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+        document.getElementById('zoomModal').classList.remove('active');
+        document.getElementById('zoomedImg').src = '';
+    }
+</script>
+
+<body>
+
+
+    <div style="position: absolute; width: 100%;">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+    </div>
+
+    <br>
+    <div style=" position: relative;">
+        <div style=" letter-spacing: 3px; font-weight: bold; display: flex; justify-content: space-around;">
+            <a href="#" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">HOME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#project" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">PROJECT</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">RESUME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#abt" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">CONTACT</a>
+        </div>
+
+        <div
+            style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+            <div>
+                <img src="Group 604.png" style="padding-left: 10px;">
+            </div>
+            <div style="width: 45%;">
+                <p class="tx" style="font-size: 40px;">Inside McFadden’s Mind | Website Concept Reimagined</p><br>
+                <a href="https://www.behance.net/gallery/232465231/Inside-McFaddens-Mind-Website-Concept-Reimagined"
+                    target="_blank">
+                    <p style="text-align: center; font-size: 20px;">View on Behance</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; ">
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>ROLE</b>: UI Designer | Brand Designer</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>TOOLS</b>: Figma, Adobe Capture</p>
+                </div>
+
+            </div>
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>DURATION</b>: 2 Weeks</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;">
+                        <b>ELEVATOR SUMMARY</b>: Reimagining a website that visually immerses users into McFadden’s creative universe through intuitive storytelling and interaction.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Problem & Objective</p>
+            <p style="font-size: 25px;"><b>PROBLEM</b>: Insufficient story immersion and narrative clarity, 
+                combined with visual clutter, detract from the content’s emotional tone. <br><br>
+                <b>OBJECTIVE</b>: Elevate storytelling through a more engaging layout that creates
+                 an emotional connection via intuitive navigation and design mood, while strengthening
+                 brand identity through impactful visual elements and interactivity.
+            </p>
+        </div>
+
+
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Research & Insight</p>
+            <p style="font-size: 25px;"><b>RESEARCH METHODS</b>: Heuristic audit of the original site and 
+                inspiration benchmarking<br><br>
+                <b>INSIGHT HIGHLIGHTS</b>:
+            <ul>
+                <li style="font-size: 20px;">Highlight core insights such as “Users felt lost in long scrolling experience.”</li>
+                <li style="font-size: 20px;">Use visuals like a quick moodboard that conveys the theme of books she writes.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Concept</p>
+            <p style="font-size: 25px;"><b>CONCEPTUAL NARRATIVE</b>: Guiding users as though exploring McFadden’s 
+                mind—using narrative sections and visual anchors.<br><br>
+                
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Design Highlights</p>
+            <p style="font-size: 25px;">The design embraces a <b>dark, suspenseful aesthetic</b> with layered visuals and
+                shadowed typography to mirror the intrigue of McFadden’s thrillers.<br><br>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div><img src="Group 605.png" style="width: 700px; height: auto;"></div>
+            </div>
+            </p>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Design Comparison</p>
+
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
+                    <div><p style="font-size: 25px;">Before</p></div>
+                    <img src="Group 606.png" style="width: 70%; height: auto;  padding-top: 1%;">
+                    <img src="Group 611.png" style="width: 70%; height: auto;  padding-top: 2%;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; width: 50%;">
+                    <div><p style="font-size: 25px;">After</p></div>
+                    <img src="Desktop - 78 1.png" style="width: 70%; height: auto; padding-top: 1%;">
+                    <img src="Desktop - 82 1.png" style="width: 70%; height: auto;  padding-top: 2%;">
+                </div>
+            </div>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Lo-Fi Wireframes</p>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 663.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 663.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 664.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 664.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 665.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 665.png')">🔍</button>
+                </div>
+
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Final Screens</p>
+            <p style="font-size: 25px;">A landing/home page with an expressive hero section, 
+                a mindscape exploration section as a visual storytelling interface, 
+                and a content details page layout.<br><br>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 607.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 607.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 608.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 608.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 609.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 609.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 610.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 610.png')">🔍</button>
+                </div>
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
+
+    <div style="padding:5%;">
+        <p class="tx" style="font-size: 35px;">Impact & Reflections</p>
+        <p style="font-size: 25px;"><b>IMPACT (POTENTIAL)</b>: </p>
+        <ul>
+            <li style="font-size: 20px;">Improved visitor engagement by making the experience more immersive.</li>
+            <li style="font-size: 20px;">Enhanced storytelling delivered a unique brand identity.
+            </li>
+        </ul>
+        <br><br>
+        <p style="font-size: 25px;"><b>REFLECTION</b>:</p>
+        <ul>
+            <li style="font-size: 20px;">Challenges faced (e.g., balancing visual creativity with usability)</li>
+
+        </ul>
+        </p>
+    </div>

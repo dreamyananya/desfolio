@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Client Project : SyntX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Reem+Kufi:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Ellipse 221.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Reem Kufi", sans-serif;
+        font-style: normal;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url(Download\ premium\ image\ of\ Paper\ texture\ mobile\ wallpaper\,\ simple\ background\ by\ mook\ about\ instagram\ story\ plain\ background\,\ beige\ minimalist\ wallpaper\,\ plain\ cream\ background\,\ minimalist\ iphone\ wallpaper\,\ and\ instagr.jfif);
+        background-position: center;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 25px;
+    }
+
+    .tx {
+        font-family: "Give You Glory", cursive;
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .collage {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 40px auto;
+    }
+
+    .collage img {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.2s;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    .img-container {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .img1 {
+        top: 20px;
+        left: 0px;
+        transform: rotate(-8deg);
+    }
+
+    .img2 {
+        top: 60px;
+        left: 100px;
+        transform: rotate(6deg);
+    }
+
+    .img3 {
+        top: 140px;
+        left: 100px;
+        transform: rotate(-4deg);
+    }
+
+    .img4 {
+        top: 100px;
+        left: 200px;
+        transform: rotate(10deg);
+    }
+
+    .img5 {
+        top: 150px;
+        left: 100px;
+        transform: rotate(-7deg);
+    }
+
+    .img6 {
+        top: 180px;
+        left: 250px;
+        transform: rotate(3deg);
+    }
+
+    .flex-collage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        margin: 40px auto;
+        max-width: 900px;
+    }
+
+    .img-box {
+        position: relative;
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+    }
+
+    /* Zoom button top left */
+    .zoom-btn {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.95;
+        z-index: 2;
+    }
+
+    /* Zoom modal styles */
+    .zoom-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .zoom-modal.active {
+        display: flex;
+    }
+
+    .zoom-modal img {
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        background: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+</style>
+
+<script>
+    function zoomImage(src) {
+        document.getElementById('zoomedImg').src = src;
+        document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+        document.getElementById('zoomModal').classList.remove('active');
+        document.getElementById('zoomedImg').src = '';
+    }
+</script>
+
+<body>
+
+
+    <div style="position: absolute; width: 100%;">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        
+    </div>
+
+    <br>
+    <div style=" position: relative;">
+        <div style=" letter-spacing: 3px; font-weight: bold; display: flex; justify-content: space-around;">
+            <a href="#" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">HOME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#project" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">PROJECT</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">RESUME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#abt" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">CONTACT</a>
+        </div>
+
+        <div
+            style="margin-top: 1%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+            <div>
+                <img src="Group 650.png" style="padding-left: 10px; width: 50vw; height: auto;">
+            </div>
+            <div style="width: 45%;">
+                <p class="tx" style="font-size: 40px;">SyntX | Collaborative AI Coding Platform Website</p><br>
+                <a href="https://syntx.dev/"
+                    target="_blank">
+                    <p style="text-align: center; font-size: 20px;">View Website</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; ">
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>ROLE</b>: Lead UI/UX Designer (end-to-end: research, wireframing, high-fidelity design)</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>TOOLS</b>: Figma, Adobe Capture</p>
+                </div>
+
+            </div>
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>DURATION</b>: 5 Weeks</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;">
+                        <b>ELEVATOR PITCH</b>: Redesigned the SyntX website to clearly communicate its strengths,
+                        context-aware AI coding, extensibility, and developer-first capabilities—while creating a unique,
+                         and engaging user experience.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Problem & Objective</p>
+            <p style="font-size: 25px;"><b>PROBLEM</b>: The existing website looked too generic, A.I. generated
+              and needed to better showcase SyntX’s value proposition while providing an 
+              intuitive and visually compelling visitor experience.<br><br>
+                <b>OBJECTIVE</b>: Elevate the SyntX website to showcase its key strengths through a clear
+                 and engaging experience. The design needed to serve both students and professionals, 
+                 remain responsive and modern, and capture a nostalgic <b>Macindows theme</b>.
+            </p>
+        </div>
+
+
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Research & Insight</p>
+            <p style="font-size: 25px;">
+                
+                <b>RESEARCH METHODS</b>:</p>
+            <ul>
+                <li style="font-size: 20px;">Review of existing marketing site to identify information gaps.</li>
+                <li style="font-size: 20px;">Competitive analysis of AI-tool landing pages (e.g., GitHub Copilot, Cursor) 
+                  to benchmark clarity and feature presentation.</li>
+            </ul>
+            <br>
+
+            <p style="font-size: 25px;">
+                <b>INSIGHT HIGHLIGHTS</b>:</p>
+            <ul>
+                <li style="font-size: 20px;">Engineers prefer concise, benefit-driven headlines with minimal fluff.</li>
+                <li style="font-size: 20px;">Visuals and hierarchy must reflect advanced tech, trustworthiness, and ease-of-use.</li>
+                
+            </ul>
+            
+        </div>
+
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Concept</p>
+            <p style="font-size: 25px;"><b>CONCEPTUAL NARRATIVE</b>: A confident, streamlined landing 
+              approach "Code. Create. Conquer." delivers speed, adaptability, and intelligence upfront.<br><br>
+              <b>USER FLOW AT A GLANCE:</b>:
+            </p>
+
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 646.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 646.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 647.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 647.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 649.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 649.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 644.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 644.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 648.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 648.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 645.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 645.png')">🔍</button>
+                </div>
+            </div>
+        </div>
+                
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Design Highlights</p>
+            <p style="font-size: 25px;">The overall interface draws inspiration from a <b>Macindows</b> 
+              theme, blending macOS-inspired elegance and smooth gradients with Windows-like structured layouts 
+              for a balance of aesthetics and functionality<br><br>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div><img src="Group 643.png" style="width: 700px; height: auto;"></div>
+            </div>
+            </p>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Lo-Fi Wireframes</p>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 657.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 657.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 658.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 658.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 661.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 661.png')">🔍</button>
+                </div>
+
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
+
+
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Final Screens</p>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 639.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 639.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 640.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 640.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 641.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 641.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 642.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 642.png')">🔍</button>
+                </div>
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
+
+    <div style="padding:5%;">
+        <p class="tx" style="font-size: 35px;">Impact & Reflections</p>
+        <p style="font-size: 25px;"><b>IMPACT (POTENTIAL)</b>: </p>
+        <ul>
+            <li style="font-size: 20px;">Improved visitor engagement by 22.85% and still counting.</li>
+            <li style="font-size: 20px;">The new layout communicates features more succinctly, improving user comprehension and engagement.
+            </li>
+        </ul>
+        <br><br>
+        <p style="font-size: 25px;"><b>REFLECTION</b>:</p>
+        <ul>
+            <li style="font-size: 20px;">Tech products need clarity and brevity to succeed.</li>
+
+        </ul>
+        </p>
+    </div>

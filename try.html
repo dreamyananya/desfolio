@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Doodle Tales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Reem+Kufi:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Ellipse 221.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Reem Kufi", sans-serif;
+        font-style: normal;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-image: url(Download\ premium\ image\ of\ Paper\ texture\ mobile\ wallpaper\,\ simple\ background\ by\ mook\ about\ instagram\ story\ plain\ background\,\ beige\ minimalist\ wallpaper\,\ plain\ cream\ background\,\ minimalist\ iphone\ wallpaper\,\ and\ instagr.jfif);
+        background-position: center;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 25px;
+    }
+
+    .tx {
+        font-family: "Give You Glory", cursive;
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .collage {
+        position: relative;
+        width: 600px;
+        height: 400px;
+        margin: 40px auto;
+    }
+
+    .collage img {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.2s;
+        z-index: 1;
+        border-radius: 10px;
+    }
+
+    .img-container {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .img1 {
+        top: 20px;
+        left: 0px;
+        transform: rotate(-8deg);
+    }
+
+    .img2 {
+        top: 60px;
+        left: 100px;
+        transform: rotate(6deg);
+    }
+
+    .img3 {
+        top: 140px;
+        left: 100px;
+        transform: rotate(-4deg);
+    }
+
+    .img4 {
+        top: 100px;
+        left: 200px;
+        transform: rotate(10deg);
+    }
+
+    .img5 {
+        top: 150px;
+        left: 100px;
+        transform: rotate(-7deg);
+    }
+
+    .img6 {
+        top: 180px;
+        left: 250px;
+        transform: rotate(3deg);
+    }
+
+    .flex-collage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+        margin: 40px auto;
+        max-width: 900px;
+    }
+
+    .img-box {
+        position: relative;
+        width: 400px;
+        height: auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+    }
+
+    /* Zoom button top left */
+    .zoom-btn {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.95;
+        z-index: 2;
+    }
+
+    /* Zoom modal styles */
+    .zoom-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .zoom-modal.active {
+        display: flex;
+    }
+
+    .zoom-modal img {
+        max-width: 80vw;
+        max-height: 80vh;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        background: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+</style>
+
+<script>
+    function zoomImage(src) {
+        document.getElementById('zoomedImg').src = src;
+        document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+        document.getElementById('zoomModal').classList.remove('active');
+        document.getElementById('zoomedImg').src = '';
+    }
+</script>
+
+<body>
+
+
+    <div style="position: absolute; width: 100%;">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+        <img src="im.png" style="width: 100%; height: auto; filter: opacity(20%);">
+    </div>
+
+    <br>
+    <div style=" position: relative;">
+        <div style=" letter-spacing: 3px; font-weight: bold; display: flex; justify-content: space-around;">
+            <a href="#" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">HOME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#project" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">PROJECT</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">RESUME</a>
+            <p style="color: rgba(0, 0, 0, 0.664);"> | </p>
+            <a href="#abt" style="text-decoration: none; color: rgba(0, 0, 0, 0.664);">CONTACT</a>
+        </div>
+
+        <div
+            style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+            <div>
+                <img src="Group 578.png" style="padding-left: 10px;">
+            </div>
+            <div style="width: 45%;">
+                <p class="tx" style="font-size: 40px;">Doodle Tales | Every scribble tells a story</p><br>
+                <a href="https://www.behance.net/gallery/229613275/Doodle-Tales-Every-scribble-tells-a-story"
+                    target="_blank">
+                    <p style="text-align: center; font-size: 20px;">View on Behance</p>
+                </a>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; ">
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>ROLE</b>: UI/UX Designer | UX Researcher</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>TOOLS</b>: Figma, Ibis Paint X, Adobe Capture</p>
+                </div>
+
+            </div>
+
+            <div
+                style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-items: center;">
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;"><b>DURATION</b>: 3 Weeks</p>
+                </div>
+                <div style="padding: 20px; width: 40%;">
+                    <p style="font-size: 25px; text-align: left;">
+                        <b>QUICK IMPACT</b>: A whimsical storytelling platform transforming
+                        simple doodles into interactive narratives that engage users creatively.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Problem & Objective</p>
+            <p style="font-size: 25px;"><b>PROBLEM</b>: Casual doodlers lack a playful, intuitive way to bring their
+                scribbles to life as digital stories that are easy for kids to comprehend. <br><br>
+                <b>OBJECTIVE</b>: Create a delightful, easy-to-use interface that transforms
+                user sketches into shareable, narrative-driven experiences.
+            </p>
+        </div>
+
+
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Research & Insight</p>
+            <p style="font-size: 25px;"><b>RESEARCH METHODS</b>: Informal user interviews (with doodle enthusiasts) and
+                parents.<br><br>
+                <b>INSIGHT HIGHLIGHTS</b>:
+            <ul>
+                <li style="font-size: 20px;">Users love creating but need features that spark imagination.</li>
+                <li style="font-size: 20px;">Stories should be accessible in all formats possible.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Concept & Flow</p>
+            <p style="font-size: 25px;"><b>CONCEPT VISUALS</b>: A UI based on doodle theme itself,
+                that attracts kids.<br><br>
+                <b>USER FLOW AT A GLANCE:</b>:
+            </p>
+
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 600.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 600.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 601.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 600.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 602.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 600.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 603.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 600.png')">🔍</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Design Highlights</p>
+            <p style="font-size: 25px;">Hand-drawn textures, <b> doodle-style icons</b>,
+                vibrant accents for landing page or product introduction
+                while keeping the doodling UI clean and simple for kids to grasp.<br><br>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div><img src="12.png" style="width: 300px; height: auto;"></div>
+                <div><img src="13.png" style="width: 300px; height: auto;"></div>
+                <div><img src="14.png" style="width: 300px; height: auto;"></div>
+                <div><img src="15.png" style="width: 300px; height: auto;"></div>
+            </div>
+            </p>
+        </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Lo-Fi Wireframes</p>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 666.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 666.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 667.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 667.png')">🔍</button>
+
+                </div>
+
+                
+
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
+
+        <div style="padding:5%;">
+            <p class="tx" style="font-size: 35px;">Final Screens</p>
+            <div class="collage">
+                <div class="img-container img1">
+                    <img src="Group 593.png" alt="Image 1">
+                    <button class="zoom-btn" onclick="zoomImage('Group 593.png')">🔍</button>
+                </div>
+                <div class="img-container img2">
+                    <img src="Group 594.png" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 594.png')">🔍</button>
+                </div>
+                <div class="img-container img3">
+                    <img src="Group 595.png" alt="Image 3">
+                    <button class="zoom-btn" onclick="zoomImage('Group 595.png')">🔍</button>
+                </div>
+                <div class="img-container img4">
+                    <img src="Group 597.png" alt="Image 4">
+                    <button class="zoom-btn" onclick="zoomImage('Group 597.png')">🔍</button>
+                </div>
+
+                <div class="img-container img6">
+                    <img src="Group 593.png" alt="Image 6">
+                    <button class="zoom-btn" onclick="zoomImage('Group 593.png')">🔍</button>
+                </div>
+            </div>
+            <div class="zoom-modal" id="zoomModal">
+                <button class="close-btn" onclick="closeZoom()">✖</button>
+                <img id="zoomedImg" src="" alt="Zoomed Image">
+            </div>
+
+        </div>
+        <div class="zoom-modal" id="zoomModal">
+            <button class="close-btn" onclick="closeZoom()">✖</button>
+            <img id="zoomedImg" src="" alt="Zoomed Image">
+        </div>
+        </p>
+    </div>
+
+    <div style="padding:5%;">
+        <p class="tx" style="font-size: 35px;">Impact & Reflections</p>
+        <p style="font-size: 25px;"><b>IMPACT (POTENTIAL)</b>: </p>
+        <ul>
+            <li style="font-size: 20px;">Encouraged creative self-expression in a playful interface.</li>
+            <li style="font-size: 20px;">Boosted user engagement by making storytelling accessible to kids
+                in video, audio as well as text format.
+            </li>
+        </ul>
+        <br><br>
+        <p style="font-size: 25px;"><b>REFLECTION</b>:</p>
+        <ul>
+            <li style="font-size: 20px;">While curating for kids as primary users, clarity and playful styling
+                should be balanced to keep their attention.</li>
+
+        </ul>
+        </p>
+    </div>
