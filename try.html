@@ -194,6 +194,7 @@
         width: 350px !important;
         padding-left: 0 !important;
     }
+    }
 
     .navbar {
         letter-spacing: 3px;
@@ -268,8 +269,6 @@
     }
 
 
-}
-
     
 </style>
 
@@ -297,6 +296,7 @@
     </div>
 
     <br>
+
     <div style=" position: relative;">
         <nav class="navbar">
             <div class="hamburger" onclick="toggleMenu()">
@@ -305,13 +305,13 @@
                 <span></span>
             </div>
             <div class="navbar-links" id="navbarLinks">
-                <a href="#">HOME</a>
+                <a href="index.html">HOME</a>
                 <p>|</p>
-                <a href="#project">PROJECT</a>
+                <a href="index.html#project">PROJECT</a>
                 <p>|</p>
                 <a href="Ananya_Ganjoo's_Resume.pdf" target="_blank">RESUME</a>
                 <p>|</p>
-                <a href="#abt">CONTACT</a>
+                <a href="index.html#abt">CONTACT</a>
             </div>
         </nav>
 
@@ -460,41 +460,42 @@
 
         <div style="padding:5%;">
             <p class="tx" style="font-size: 35px;">Final Screens</p>
-            <div class="collage">
-                <div class="img-container img1">
-                    <img src="Group 593.png" alt="Image 1">
+            <p style="font-size: 25px;">A landing/home page with an expressive hero section, 
+                a mindscape exploration section as a visual storytelling interface, 
+                and a content details page layout.<br><br>
+
+            <div class="flex-collage"
+                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+                <div class="img-box">
+                    <img src="Group 593.png" style="width: 400px; height: auto;" alt="Image 2">
                     <button class="zoom-btn" onclick="zoomImage('Group 593.png')">🔍</button>
-                </div>
-                <div class="img-container img2">
-                    <img src="Group 594.png" alt="Image 2">
-                    <button class="zoom-btn" onclick="zoomImage('Group 594.png')">🔍</button>
-                </div>
-                <div class="img-container img3">
-                    <img src="Group 595.png" alt="Image 3">
-                    <button class="zoom-btn" onclick="zoomImage('Group 595.png')">🔍</button>
-                </div>
-                <div class="img-container img4">
-                    <img src="Group 597.png" alt="Image 4">
-                    <button class="zoom-btn" onclick="zoomImage('Group 597.png')">🔍</button>
                 </div>
 
-                <div class="img-container img6">
-                    <img src="Group 593.png" alt="Image 6">
-                    <button class="zoom-btn" onclick="zoomImage('Group 593.png')">🔍</button>
+                <div class="img-box">
+                    <img src="Group 594.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 594.png')">🔍</button>
+
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 595.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 595.png')">🔍</button>
+                </div>
+
+                <div class="img-box">
+                    <img src="Group 597.png" style="width: 400px; height: auto;" alt="Image 2">
+                    <button class="zoom-btn" onclick="zoomImage('Group 597.png')">🔍</button>
                 </div>
             </div>
             <div class="zoom-modal" id="zoomModal">
                 <button class="close-btn" onclick="closeZoom()">✖</button>
                 <img id="zoomedImg" src="" alt="Zoomed Image">
             </div>
-
         </div>
         <div class="zoom-modal" id="zoomModal">
-            <button class="close-btn" onclick="closeZoom()">✖</button>
-            <img id="zoomedImg" src="" alt="Zoomed Image">
-        </div>
-        </p>
-    </div>
+    <button class="close-btn" onclick="closeZoom()">✖</button>
+    <img id="zoomedImg" src="" alt="Zoomed Image">
+  </div>
 
     <div style="padding:5%;">
         <p class="tx" style="font-size: 35px;">Impact & Reflections</p>
