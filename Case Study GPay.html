@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study - GooglePay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+          font-family: "Roboto Mono", monospace;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.726);
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 20px;
+    }
+
+    a :hover {
+
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    .navbar-links a:hover {
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+   
+
+    .navbar {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
+
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .navbar-links a,
+    .navbar-links p {
+        color: rgba(0, 0, 0, 0.664);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 16px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 28px;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /*@media (max-width: 768px) {
+        .navbar {
+            justify-content: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+           position: absolute; 
+            top: 60px;
+            left: 16px;
+            background: #f4f4f4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: none;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }*/
+
+    .form-label:hover {
+        font-style: italic;
+        
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById('navbarLinks');
+        links.classList.toggle('active');
+    }
+</script>
+
+<body>
+    
+    <div style="display: flex; flex-direction: column;">
+        <div style="margin-top: 20px; margin-left: 20px;">
+            
+                <div class="navbar-links" id="navbarLinks" >
+                    <a href="index.html" >Home</a>
+                    <a href="AnanyaGanjoo_Resume.pdf" target="_blank">Resume</a>
+                    
+                    
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <p style="font-size: 40px; text-align: center; color: rgba(0, 0, 0, 0.7);">Senior friendly GooglePay</p>
+            <a href="https://www.behance.net/gallery/241277829/Senior-First-UX-UX-for-Senior-Digital-Literacy" target="_blank" style="font-size: 15px; display: flex; justify-content: center;">View on Behance</a>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 45%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Role➔ Product Designer</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Duration➔ 4 weeks</p>
+            </div>
+
+            <div style="width: 45%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Tools➔ Figma, Miro, GPay [reference]</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Elevator summary➔ A UX case study on integrating a senior-friendly mode into UPI apps to improve accessibility, trust, and ease of use.</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Problem➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Senior citizens (55+, especially 65+) often struggle to complete essential digital financial tasks such as UPI payments, hospital registrations, and online bookings without assistance.
+Despite the availability of UPI apps, many seniors abandon onboarding or avoid digital payments entirely due to complex flows, security confusion, and interface overload.</p>
+            </div>
+
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Objective➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Design a simplified Senior Mode interaction layer within a UPI app that enables seniors to independently perform essential transactions while improving clarity, trust, and usability.</p>
+            </div>
+        </div>
+
+        <div>
+            <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); ">
+                    <source src="demogp.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Research method➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Semi-structured user interviews (10 Seniors with different level of digital literacy)</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Competitive analysis of existing platforms like GPay, PhonePay, PayTM</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Task walkthroughs with seniors</li>
+                </ul>
+            </div>
+
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Insight highlights➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Complex, time-bound onboarding flows (OTP, KYC, PIN setup) are the single biggest barrier preventing seniors from ever completing UPI adoption</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Feature-dense “super-app” interfaces overwhelm seniors cognitively, causing errors and anxiety even when basic payment capability exists</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Unexplained security prompts (OTP, PIN, biometrics) increase fear of fraud among seniors, reducing trust and willingness to transact</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Unclear error messages and weak recovery guidance lead seniors to permanently abandon apps rather than attempt reuse</li>
+                </ul>
+            </div>
+
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Focus Areas➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Onboarding experience</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Payment task completion</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Trust and fraud perception</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Error handling</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">User Flow➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <img src="ufgp.jpg" alt="User Flow" style="width: 100%; height: auto;">
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Senior Mode Concept➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">A dedicated Senior Mode simplifies the app experience by focusing only on the most common tasks.</li>
+                    
+                </ul>
+            </div>
+
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Simplified home screen➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Pay</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Check Balance</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Transfer Money</li>
+                    <li style="font-size: 16px; margin-right: 10px;">UPI ID + QR Code</li>
+                </ul>
+            </div>
+
+            <div style="width: 30%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Common pin for app lock and payment gateway➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Reduces cognitive load by eliminating the need to remember multiple credentials</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Increases security by ensuring that the same PIN is used for both app access and transaction authorization</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Enhances user confidence and trust in the app's security measures</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Option to set a separate PIN for app lock and payment gateway available under advanced settings</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        
+
+        <!--<div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 15%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 85%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                
+                <div>
+                    <img src="dtpt (7).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (4).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (6).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (5).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (3).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (1).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                        <source src="dtfpt.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>-->
+
+        <div style="margin-top: 50px;">
+            
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;">
+            
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="protogp1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="protogp2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="gpfp2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+            
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Impact➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Reduced cognitive load for senior users</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Improved confidence and task completion</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Increased trust in digital transactions</li>
+                </ul>
+            </div>
+
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Reflection➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Learned the importance of designing for emotional safety</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Understood the value of restraint in feature design</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Gained insights into accessibility and inclusivity in UX</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 50px; flex-wrap: wrap;">
+            <div>
+                <a href="Case Study DT.html"><p>⬅ DoodleTales</p></a>
+            </div>
+
+            <div>
+                <a href="Case Study SyntX.html"><p>SyntX ➔</p></a>
+            </div>
+        </div>
+
+        <div id="foot" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;">
+            <div>
+                <a href="https://www.behance.net/ananyaganjoo" target="_blank"><p>Behance ➔</p></a>
+                <a href="https://dribbble.com/ananyaganjoo-ux" target="_blank"><p>Dribble ➔</p></a>
+                <a href="https://www.instagram.com/designanya.indd?igsh=ZHNyZDJ4aXo5b205" target="_blank"><p>Instagram ➔</p></a>
+            </div>
+
+            <div>
+                <p>📍 Delhi, India</p>
+                <a href="me.html"><p>Who am I ➔</p></a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/ganjooananya2003" target="_blank"><p>LinkedIn ➔</p></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com" target="_blank"><p>Email ➔</p></a>
+                <a href="AnanyaGanjoo_Resume.pdf" target="_blank"><p>Resume ➔</p></a>
+            </div>
+        </div>
+
+
+
+        <div class="copy">
+            <p style="text-align: center; padding: 20px; font-size: 18px;">© 2026 Ananya Ganjoo. All rights reserved.</p>
+        </div>
+
+                 

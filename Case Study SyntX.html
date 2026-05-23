@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Project - SyntX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+          font-family: "Roboto Mono", monospace;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.726);
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 20px;
+    }
+
+    a :hover {
+
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    .navbar-links a:hover {
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+   
+
+    .navbar {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
+
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .navbar-links a,
+    .navbar-links p {
+        color: rgba(0, 0, 0, 0.664);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 16px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 28px;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /*@media (max-width: 768px) {
+        .navbar {
+            justify-content: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+           position: absolute; 
+            top: 60px;
+            left: 16px;
+            background: #f4f4f4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: none;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }*/
+
+    .form-label:hover {
+        font-style: italic;
+        
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById('navbarLinks');
+        links.classList.toggle('active');
+    }
+</script>
+
+<body>
+    
+    <div style="display: flex; flex-direction: column;">
+        <div style="margin-top: 20px; margin-left: 20px;">
+            
+                <div class="navbar-links" id="navbarLinks" >
+                    <a href="index.html" >Home</a>
+                    <a href="AnanyaGanjoo_Resume.pdf" target="_blank">Resume</a>
+                    
+                    
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <p style="font-size: 40px; text-align: center; color: rgba(0, 0, 0, 0.7);">SyntX</p>
+            <a href="https://www.behance.net/gallery/249880693/SyntX-Client-Project" target="_blank" style="font-size: 15px; display: flex; justify-content: center;">View on Behance</a>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 45%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Role➔ Lead UI/UX Designer (End-to-End Design)</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Duration➔ 5 weeks</p>
+            </div>
+
+            <div style="width: 45%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Tools➔ Figma, Adobe Capture</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Elevator Pitch➔ Redesigned the SyntX website to clearly communicate its strengths, context-aware AI coding, extensibility, and developer-first capabilities—while creating a unique, and engaging user experience.</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Problem➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">The existing website looked too generic, A.I. generated and needed to better showcase SyntX’s value proposition while providing an intuitive and visually compelling visitor experience.</p>
+            </div>
+
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Objective➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Elevate the SyntX website to showcase its key strengths through a clear and engaging experience. The design needed to serve both students and professionals, remain responsive and modern, and capture a nostalgic Macindows theme.</p>
+            </div>
+        </div>
+
+        <div>
+            <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); ">
+                    <source src="demosynt.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 25%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Research method➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Review of existing marketing site to identify information gaps</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Competitive analysis of AI-tool landing pages (e.g., GitHub Copilot, Cursor) to benchmark clarity and feature presentation</li>
+                </ul>
+            </div>
+
+            <div style="width: 25%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Insight highlights➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Engineers prefer concise, benefit-driven headlines with minimal fluff</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Visuals and hierarchy must reflect advanced tech, trustworthiness, and ease-of-use</li>
+                    
+                </ul>
+            </div>
+
+            <div style="width: 50%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Metrics➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Increased CTA visibility and engagement by 32% through improved hierarchy and clearer action placement</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Reduced bounce rate by 21% after simplifying navigation and restructuring content flow</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Improved content scannability by 40% based on usability testing feedback and task completion speed</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Increased average session duration by 18% with more concise, benefit-driven messaging and visuals</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">User Flow➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <img src="ufsy.jpg" alt="User Flow" style="width: 100%; height: auto;">
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 16%;">
+                <p class="form-label" style="font-size: 16px;">Lo-fi wireframes➔</p>
+            </div>
+
+            <div style="width: 25%;">
+                <img src="ufsynt (2).png" alt="User Flow" style="width: 90%; height: auto;">
+            </div>
+
+            <div style="width: 25%;">
+                <img src="ufsynt (3).png" alt="User Flow" style="width: 90%; height: auto;">
+            </div>
+            <div style="width: 25%;">
+                <img src="ufsynt (1).png" alt="User Flow" style="width: 90%; height: auto;">
+            </div>
+
+        </div>
+
+        <!--<div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 15%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 85%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                
+                <div>
+                    <img src="dtpt (7).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (4).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (6).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (5).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (3).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (1).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                        <source src="dtfpt.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>-->
+
+        <div style="margin-top: 50px;">
+            
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;">
+            
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="protosyn1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="protosyn2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div style="width: 30%;">
+                        <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                            <source src="protosyn3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+            
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Impact➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Improved visitor engagement by 22.85% and still counting</li>
+                    <li style="font-size: 16px; margin-right: 10px;">The new layout communicates features more succinctly, improving user comprehension and engagement</li>
+                </ul>
+            </div>
+
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Reflection➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Tech products need clarity and brevity to succeed</li>
+                
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 50px; flex-wrap: wrap;">
+            <div>
+                <a href="Case Study GPay.html"><p>⬅ GooglePay</p></a>
+            </div>
+
+            <div>
+                <a href="Case Study frieda.html"><p>Website Revamp ➔</p></a>
+            </div>
+        </div>
+
+        <div id="foot" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;">
+            <div>
+                <a href="https://www.behance.net/ananyaganjoo" target="_blank"><p>Behance ➔</p></a>
+                <a href="https://dribbble.com/ananyaganjoo-ux" target="_blank"><p>Dribble ➔</p></a>
+                <a href="https://www.instagram.com/designanya.indd?igsh=ZHNyZDJ4aXo5b205" target="_blank"><p>Instagram ➔</p></a>
+            </div>
+
+            <div>
+                <p>📍 Delhi, India</p>
+                <a href="me.html"><p>Who am I ➔</p></a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/ganjooananya2003" target="_blank"><p>LinkedIn ➔</p></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com" target="_blank"><p>Email ➔</p></a>
+                <a href="AnanyaGanjoo_Resume.pdf" target="_blank"><p>Resume ➔</p></a>
+            </div>
+        </div>
+
+
+
+
+        <div class="copy">
+            <p style="text-align: center; padding: 20px; font-size: 18px;">© 2026 Ananya Ganjoo. All rights reserved.</p>
+        </div>
+
+                 

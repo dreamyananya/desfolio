@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya's Pinterest Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+          font-family: "Roboto Mono", monospace;
+        font-style: normal;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 20px;
+    }
+
+    a :hover {
+
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    .navbar-links a:hover {
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    
+
+    .navbar {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
+
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .navbar-links a,
+    .navbar-links p {
+        color: rgba(0, 0, 0, 0.664);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 16px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 28px;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    @media (max-width:1024px){
+
+    .grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+
+    @media (max-width: 768px) {
+      /*  .navbar {
+            justify-content: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+           position: absolute; 
+            top: 60px;
+            left: 16px;
+            background: #f4f4f4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: none;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }*/
+
+        .grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+        grid-auto-rows:120px;
+    }
+
+    .grid .grid-item:hover{
+        transform:scale(1.03);
+    }
+
+    .grid .grid-item:hover img{
+        max-width:260px;
+        max-height:420px;
+    }
+    }
+
+    @media (max-width:480px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+        grid-auto-rows:100px;
+    }
+
+    .grid-item:nth-child(n){
+        grid-row:span 1 !important;
+    }
+
+    .grid .grid-item:hover{
+        transform:scale(1.02);
+    }
+
+    .grid .grid-item:hover img{
+        max-width:200px;
+        max-height:320px;
+    }
+}
+
+    .container{
+    max-width:1400px;
+    margin:auto;
+}
+
+/*h1{
+    text-align:center;
+    margin-bottom:40px;
+    color:#222;
+    font-size:42px;
+    font-weight:700;
+}*/
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    grid-auto-rows:150px;
+    grid-auto-flow:dense;
+}
+
+/* GRID ITEM */
+.grid-item{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+
+    transition:
+        transform .45s ease,
+        opacity .4s ease,
+        box-shadow .45s ease;
+
+    background:#ddd;
+}
+
+/* IMAGE */
+.grid-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:
+        transform .45s ease,
+        width .45s ease,
+        height .45s ease;
+}
+
+/* DIM OTHER ITEMS */
+.grid:hover .grid-item{
+    opacity:.45;
+    transform:scale(.96);
+}
+
+/* ACTIVE HOVER CARD */
+.grid .grid-item:hover{
+
+    opacity:1;
+    z-index:999;
+
+    overflow:visible;
+
+    transform:scale(1.08);
+
+    width:max-content;
+    height:max-content;
+
+    max-width:450px;
+    max-height:650px;
+
+    padding:10px;
+
+    /*background:#fff;*/
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:26px;
+
+   /* box-shadow:
+        0 30px 70px rgba(0,0,0,.35);*/
+}
+
+/* IMAGE RETURNS TO ORIGINAL RATIO */
+.grid .grid-item:hover img{
+
+    width:auto;
+    height:auto;
+
+    max-width:420px;
+    max-height:620px;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+   /* background:#fff;
+*/
+    transform:none;
+}
+
+/* LIGHT OVERLAY */
+.grid-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    /*background:rgba(255,255,255,0);*/
+    transition:.35s ease;
+    pointer-events:none;
+    border-radius:inherit;
+}
+
+/*.grid-item:hover::after{
+    background:rgba(255,255,255,.04);
+}*/
+
+/* MASONRY HEIGHTS */
+.grid-item:nth-child(1) { grid-row: span 1; }
+.grid-item:nth-child(2) { grid-row: span 2; }
+.grid-item:nth-child(3) { grid-row: span 1; }
+.grid-item:nth-child(4) { grid-row: span 1; }
+.grid-item:nth-child(5) { grid-row: span 2; }
+.grid-item:nth-child(6) { grid-row: span 1; }
+.grid-item:nth-child(7) { grid-row: span 1; }
+.grid-item:nth-child(8) { grid-row: span 2; }
+.grid-item:nth-child(9) { grid-row: span 1; }
+.grid-item:nth-child(10){ grid-row: span 1; }
+.grid-item:nth-child(11){ grid-row: span 2; }
+.grid-item:nth-child(12){ grid-row: span 1; }
+.grid-item:nth-child(13){ grid-row: span 1; }
+.grid-item:nth-child(14){ grid-row: span 2; }
+.grid-item:nth-child(15){ grid-row: span 1; }
+.grid-item:nth-child(16){ grid-row: span 1; }
+.grid-item:nth-child(17){ grid-row: span 2; }
+.grid-item:nth-child(18){ grid-row: span 1; }
+.grid-item:nth-child(19){ grid-row: span 1; }
+.grid-item:nth-child(20){ grid-row: span 2; }
+.grid-item:nth-child(21){ grid-row: span 1; }
+.grid-item:nth-child(22){ grid-row: span 1; }
+.grid-item:nth-child(23){ grid-row: span 2; }
+.grid-item:nth-child(24){ grid-row: span 1; }
+.grid-item:nth-child(25){ grid-row: span 1; }
+.grid-item:nth-child(26){ grid-row: span 2; }
+.grid-item:nth-child(27){ grid-row: span 1; }
+.grid-item:nth-child(28){ grid-row: span 1; }
+.grid-item:nth-child(29){ grid-row: span 2; }
+.grid-item:nth-child(30){ grid-row: span 1; }
+.grid-item:nth-child(31){ grid-row: span 1; }
+.grid-item:nth-child(32){ grid-row: span 2; }
+.grid-item:nth-child(33){ grid-row: span 1; }
+.grid-item:nth-child(34){ grid-row: span 1; }
+.grid-item:nth-child(35){ grid-row: span 2; }
+.grid-item:nth-child(36){ grid-row: span 1; }
+.grid-item:nth-child(37){ grid-row: span 1; }
+.grid-item:nth-child(38){ grid-row: span 2; }
+.grid-item:nth-child(39){ grid-row: span 1; }
+.grid-item:nth-child(40){ grid-row: span 1; }
+
+
+
+</style>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById('navbarLinks');
+        links.classList.toggle('active');
+    }
+</script>
+
+<body>
+    
+    <div style="display: flex; flex-direction: column;">
+        <div style="margin-top: 20px; margin-left: 20px; margin-bottom: 50px;">
+            
+                <div class="navbar-links" id="navbarLinks" >
+                    <a href="index.html" >Home</a>
+                    <a href="AnanyaGanjoo_Resume.pdf" target="_blank">Resume</a>
+                    
+                    
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+
+    
+
+    <div class="grid">
+
+        <div class="grid-item"><img src="Idea1 (2).png" alt=""></div>
+        <div class="grid-item"><img src="Idea1.png" alt=""></div>
+        <div class="grid-item"><img src="Idea2.png" alt=""></div>
+        <div class="grid-item"><img src="Idea3.png" alt=""></div>
+        <div class="grid-item"><img src="Idea4.png" alt=""></div>
+        <div class="grid-item"><img src="Idea5.png" alt=""></div>
+        <div class="grid-item"><img src="Idea6.png" alt=""></div>
+        <div class="grid-item"><img src="Idea7.png" alt=""></div>
+        <div class="grid-item"><img src="Idea8.png" alt=""></div>
+        <div class="grid-item"><img src="Idea9.png" alt=""></div>
+        <div class="grid-item"><img src="Idea10.png" alt=""></div>
+        <div class="grid-item"><img src="Idea11.png" alt=""></div>
+        <div class="grid-item"><img src="Idea12.png" alt=""></div>
+        <div class="grid-item"><img src="Idea13.png" alt=""></div>
+        <div class="grid-item"><img src="Idea14.png" alt=""></div>
+        <div class="grid-item"><img src="Idea15.png" alt=""></div>
+        <div class="grid-item"><img src="Idea16.png" alt=""></div>
+        <div class="grid-item"><img src="Idea17.png" alt=""></div>
+        <div class="grid-item"><img src="Idea18.png" alt=""></div>
+        <div class="grid-item"><img src="Idea1g.png" alt=""></div>
+        <div class="grid-item"><img src="Idea1hdg4.png" alt=""></div>
+        <div class="grid-item"><img src="Idea1kkk.png" alt=""></div>
+        <div class="grid-item"><img src="Idea122.png" alt=""></div>
+        <div class="grid-item"><img src="post1.png" alt=""></div>
+        <div class="grid-item"><img src="post2.png" alt=""></div>
+        <div class="grid-item"><img src="post3.png" alt=""></div>
+        <div class="grid-item"><img src="post4.png" alt=""></div>
+        <div class="grid-item"><img src="post5.png" alt=""></div>
+        <div class="grid-item"><img src="post6.png" alt=""></div>
+        <div class="grid-item"><img src="post7.png" alt=""></div>
+        <div class="grid-item"><img src="post8.png" alt=""></div>
+        <div class="grid-item"><img src="post9.png" alt=""></div>
+        <div class="grid-item"><img src="secshot3.png" alt=""></div>
+        <div class="grid-item"><img src="thirdshot6.png" alt=""></div>
+        <div class="grid-item"><img src="shot8.png" alt=""></div>
+        <div class="grid-item"><img src="Frame 9.png" alt=""></div>
+        <div class="grid-item"><img src="Frame 16.png" alt=""></div>
+        <div class="grid-item"><img src="Frame 8.png" alt=""></div>
+        <div class="grid-item"><img src="Frame 15.png" alt=""></div>
+        <div class="grid-item"><img src="Frame 11.png" alt=""></div>
+
+    </div>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 50px; flex-wrap: wrap;">
+            <div>
+                <a href="Case Study frieda.html"><p>⬅ Website Revamp</p></a>
+            </div>
+
+            <div>
+                <a href="Case Study DT.html"><p>DoodleTales ➔</p></a>
+            </div>
+        </div>
+
+     <div id="foot" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;">
+            <div>
+                <a href="https://www.behance.net/ananyaganjoo" target="_blank"><p>Behance ➔</p></a>
+                <a href="https://dribbble.com/ananyaganjoo-ux" target="_blank"><p>Dribble ➔</p></a>
+                <a href="https://www.instagram.com/designanya.indd?igsh=ZHNyZDJ4aXo5b205" target="_blank"><p>Instagram ➔</p></a>
+            </div>
+
+            <div>
+                <p>📍 Delhi, India</p>
+                <a href="me.html"><p>Who am I ➔</p></a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/ganjooananya2003" target="_blank"><p>LinkedIn ➔</p></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com" target="_blank"><p>Email ➔</p></a>
+                <a href="AnanyaGanjoo_Resume.pdf" target="_blank"><p>Resume ➔</p></a>
+            </div>
+        </div>
+
+
+
+        <div class="copy">
+            <p style="text-align: center; padding: 20px; font-size: 18px;">© 2026 Ananya Ganjoo. All rights reserved.</p>
+        </div>
+
+</div>
+

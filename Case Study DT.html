@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study - DoodleTales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+          font-family: "Roboto Mono", monospace;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.726);
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.726);
+        font-size: 20px;
+    }
+
+    a :hover {
+
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    .navbar-links a:hover {
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+   
+
+    .navbar {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: transparent;
+
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .navbar-links a,
+    .navbar-links p {
+        color: rgba(0, 0, 0, 0.664);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 16px;
+    }
+
+    .hamburger span {
+        height: 4px;
+        width: 28px;
+        background: rgba(0, 0, 0, 0.7);
+        margin: 4px 0;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /*@media (max-width: 768px) {
+        .navbar {
+            justify-content: flex-start;
+        }
+
+        .navbar-links {
+            flex-direction: column;
+           position: absolute; 
+            top: 60px;
+            left: 16px;
+            background: #f4f4f4;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: none;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }*/
+
+    .form-label:hover {
+        font-style: italic;
+        
+    }
+</style>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById('navbarLinks');
+        links.classList.toggle('active');
+    }
+</script>
+
+<body>
+    
+    <div style="display: flex; flex-direction: column;">
+        <div style="margin-top: 20px; margin-left: 20px;">
+            
+                <div class="navbar-links" id="navbarLinks" >
+                    <a href="index.html" >Home</a>
+                    <a href="AnanyaGanjoo_Resume.pdf" target="_blank">Resume</a>
+                    
+                    
+                </div>
+            </nav>
+        </div>
+
+        <div>
+            <p style="font-size: 40px; text-align: center; color: rgba(0, 0, 0, 0.7);">DoodleTales</p>
+            <a href="https://www.behance.net/gallery/229613275/Doodle-Tales-Every-scribble-tells-a-story" target="_blank" style="font-size: 15px; display: flex; justify-content: center;">View on Behance</a>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 50%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Role➔ UI/UX Designer</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Duration➔ 3 weeks</p>
+            </div>
+
+            <div style="width: 50%;">
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Tools➔ Figma, Ibis Paint X, Adobe Capture</p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Quick Impact➔ A whimsical storytelling platform transforming simple doodles into interactive narratives that engage users creatively.</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Problem➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Casual doodlers lack a playful, intuitive way to bring their scribbles to life as digital stories that are easy for kids to comprehend.</p>
+            </div>
+
+            <div style="width: 45%;">
+                <p class="form-label" style="font-size: 16px; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Objective➔ </p>
+                <p style="font-size: 16px; color: rgba(0, 0, 0, 0.664);  margin-bottom: 20px;">Create a delightful, easy-to-use interface that transforms user sketches into shareable, narrative-driven experiences.</p>
+            </div>
+        </div>
+
+        <div>
+            <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); ">
+                    <source src="demodoodle.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 25%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Research method➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Informal interviews with doodle enthusiasts</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Discussions with parents and young learners</li>
+                </ul>
+            </div>
+
+            <div style="width: 25%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Insight highlights➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Users enjoy features that spark imagination and creativity</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Interactive storytelling increases engagement</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Accessible story formats improve usability and inclusivity</li>
+                </ul>
+            </div>
+
+            <div style="width: 50%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Metrics➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">82% users preferred creativity-driven prompts</li>
+                    <li style="font-size: 16px; margin-right: 10px;">71% parents wanted stories in multiple formats</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Users spent 40% more time on interactive storytelling experiences</li>
+                    <li style="font-size: 16px; margin-right: 10px;">3 out of 4 participants favored visual + narrative experiences over basic drawing tools</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">User Flow➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <img src="Userflowdt.jpg" alt="User Flow" style="width: 100%; height: auto;">
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 16%;">
+                <p class="form-label" style="font-size: 16px;">Lo-fi wireframes➔</p>
+            </div>
+
+            <div style="width: 42%;">
+                <img src="dtwf1.png" alt="User Flow" style="width: 90%; height: auto;">
+            </div>
+
+            <div style="width: 42%;">
+                <img src="dtwf2.png" alt="User Flow" style="width: 90%; height: auto;">
+            </div>
+
+        </div>
+
+        <!--<div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 15%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 85%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                
+                <div>
+                    <img src="dtpt (7).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (4).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (6).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (5).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (3).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+
+                <div>
+                    <img src="dtpt (1).png" alt="User Flow" style="width: 90%; height: auto;">
+                </div>
+            
+            </div>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 50px; flex-wrap: wrap;">
+            <div style="width: 20%;">
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            </div>
+
+            <div style="width: 80%;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                        <source src="dtfpt.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>-->
+
+        <div style="margin-top: 50px;">
+            
+                <p class="form-label" style="font-size: 16px;">Final prototype➔</p>
+            
+
+            
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(40%); ">
+                        <source src="dtfpt.mp4" type="video/mp4">
+                </video>
+            
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-between; margin-top: 20px; flex-wrap: wrap;">
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Impact➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Encouraged creative self-expression in a playful interface</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Boosted user engagement by making storytelling accessible to kids in video, audio as well as text format</li>
+                </ul>
+            </div>
+
+            <div style="width: 40%;">
+                <ul style="list-style: none; ">
+                    <li class="form-label" style="font-size: 16px; margin-right: 10px;">Reflection➔</li>
+                    <li style="font-size: 16px; margin-right: 10px;">While curating for kids as primary users, clarity and playful styling should be balanced to keep their attention</li>
+                    <li style="font-size: 16px; margin-right: 10px;">Designing for younger audiences requires simplifying interactions without making the experience feel limiting or repetitive</li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+        <div style="display: flex; flex-direction: row; justify-content: space-around; margin-top: 50px; flex-wrap: wrap;">
+            <div>
+                <a href="posters.html"><p>⬅ Ananya's Pinterest</p></a>
+            </div>
+
+            <div>
+                <a href="Case Study GPay.html"><p>GooglePay ➔</p></a>
+            </div>
+        </div>
+
+        <div id="foot" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;">
+            <div>
+                <a href="https://www.behance.net/ananyaganjoo" target="_blank"><p>Behance ➔</p></a>
+                <a href="https://dribbble.com/ananyaganjoo-ux" target="_blank"><p>Dribble ➔</p></a>
+                <a href="https://www.instagram.com/designanya.indd?igsh=ZHNyZDJ4aXo5b205" target="_blank"><p>Instagram ➔</p></a>
+            </div>
+
+            <div>
+                <p>📍 Delhi, India</p>
+                <a href="me.html"><p>Who am I ➔</p></a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/ganjooananya2003" target="_blank"><p>LinkedIn ➔</p></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com" target="_blank"><p>Email ➔</p></a>
+                <a href="AnanyaGanjoo_Resume.pdf" target="_blank"><p>Resume ➔</p></a>
+            </div>
+        </div>
+
+
+
+
+        <div class="copy">
+            <p style="text-align: center; padding: 20px; font-size: 18px;">© 2026 Ananya Ganjoo. All rights reserved.</p>
+        </div>
+
+                 

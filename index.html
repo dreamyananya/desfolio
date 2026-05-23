@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ananya Ganjoo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Reem+Kufi:wght@400..700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="Ellipse 221.png" type="image/png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <style>
     * {
         padding: 0;
         margin: 0;
-        font-family: "Reem Kufi", sans-serif;
+        /*font-family: "Inter", sans-serif;*/
+          font-family: "Roboto Mono", monospace;
         font-style: normal;
 
     }
@@ -26,27 +26,30 @@
     }
 
     body {
-        background-image: url(Download\ premium\ image\ of\ Paper\ texture\ mobile\ wallpaper\,\ simple\ background\ by\ mook\ about\ instagram\ story\ plain\ background\,\ beige\ minimalist\ wallpaper\,\ plain\ cream\ background\,\ minimalist\ iphone\ wallpaper\,\ and\ instagr.jfif);
-        background-position: center;
-        width: 100vw;
-        height: fit-content;
+        background-color: #f4f4f4;
     }
 
     a {
         text-decoration: none;
         color: rgba(0, 0, 0, 0.726);
-        font-size: 25px;
+        font-size: 20px;
     }
 
-    .tx {
-        font-family: "Give You Glory", cursive;
-        font-size: 80px;
-        text-align: center;
+    a :hover {
+
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
     }
+
+    .navbar-links a:hover {
+          font-family: "Roboto Mono", monospace;
+        font-style: italic;
+    }
+
+    
 
     .navbar {
-        letter-spacing: 3px;
-        font-weight: bold;
+        
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -58,7 +61,7 @@
 
     .navbar-links {
         display: flex;
-        gap: 50px;
+        gap: 60px;
         align-items: center;
     }
 
@@ -66,7 +69,7 @@
     .navbar-links p {
         color: rgba(0, 0, 0, 0.664);
         text-decoration: none;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .hamburger {
@@ -97,10 +100,10 @@
 
         .navbar-links {
             flex-direction: column;
-            position: absolute;
+           position: absolute; 
             top: 60px;
             left: 16px;
-            background: #fffbe6;
+            background: #f4f4f4;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border-radius: 8px;
             padding: 16px 24px;
@@ -125,91 +128,130 @@
 </script>
 
 <body>
-    <img src="ChatGPT Image Aug 19, 2025, 05_28_08 PM 1.png" style="position: absolute;">
-    <img src="Group 573.png" style="position: absolute; width: 90%; height: fit-content; filter: opacity(40%);">
-
-
-    <br>
-    <div style=" position: relative;">
-        <nav class="navbar">
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="navbar-links" id="navbarLinks">
-                <a href="index.html">HOME</a>
-                <p>|</p>
-                <a href="#project">PROJECT</a>
-                <p>|</p>
-                <a href="AnanyaGanjoo'sResume.pdf" target="_blank">RESUME</a>
-                <p>|</p>
-                <a href="#abt">CONTACT</a>
-            </div>
-        </nav>
-
-        <div style="display: flex; justify-content: end;">
-            <img src="Group 566.png" width="70%" height="auto">
-        </div>
-        <br><br>
-        <div id="project">
-            <p class="tx">Projects</p> <br><br>
-            <div
-                style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; width: 100vw;">
-                <div style="margin: 5px;">
-                    <a href="Case Study-Doodle Tales.html"><img src="Group 567.png" style="width: 500px; height: auto;"></a>
+    
+    <div style="display: flex; flex-direction: column;">
+        <div>
+            <nav class="navbar" style="margin-top: 20px; margin-left: 20px; position: absolute;">
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-
-                <div style="margin: 5px;">
-                    <a href="Case Study-Refining User Experience.html"><img src="Group 571.png" style="width: 500px; height: auto;"></a>
+                <div class="navbar-links" id="navbarLinks" >
+                    <a href="index.html" >Home</a>
+                    
+                    <a href="#work">Work</a>
+                    
+                    <a href="AnanyaGanjoo_Resume.pdf" target="_blank">Resume</a>
+                    
+                    <a href="#foot">Find me</a>
                 </div>
-
-                <div style="margin: 5px;">
-                    <a href="Case Study-SyntX.html"><img src="Group 569.png" style="width: 500px; height: auto;"></a>
-                </div>
-
-                <div style="margin: 5px;">
-                    <a href="Case Study-Website Reimagined.html"><img src="Group 568.png" style="width: 500px; height: auto;"></a>
-                </div>
-            </div>
-            <br>
-           
+            </nav>
         </div>
 
-        <br><br><br><br>
+        <div>
+            <img src="Group 2.png" style="width: 100%; height: fit-content; filter: opacity(100%); ">
+        </div>
 
-        <br><br>
-        <p class="tx" id="abt">About Me</p><br><br>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+        <div id="work">
+            <a href="Case Study DT.html">
+            <div style="position: relative;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); margin-top: 20px; ">
+                    <source src="doodle.mp4" type="video/mp4">
+                </video>
+
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <p style="font-size: 50px; text-align: center;">DoodleTales | Scribble to storytelling [2024] </p>
+                </div>
+            </div>
+            </a>
+            
+        </div>
+
+        <div>
+            <a href="Case Study GPay.html">
+            <div style="position: relative;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); margin-top: 20px; ">
+                    <source src="gpay.mp4" type="video/mp4">
+                </video>
+
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <p style="font-size: 50px; text-align: center;">GPay |  Senior friendly digital payment solution [2025]</p>
+                </div>
+            </div>
+            </a>
+            
+        </div>
+
+        <div>
+            <a href="Case Study SyntX.html">
+            <div style="position: relative;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); margin-top: 20px; ">
+                    <source src="syntx2.mp4" type="video/mp4">
+                </video>
+
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <p style="font-size: 50px; text-align: center;">SyntX | Collaborative AI Coding Platform [2025]</p>
+                </div>
+            </div>
+            </a>
+            
+        </div>
+
+        <div>
+            <a href="Case Study Freida.html">
+            <div style="position: relative;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); margin-top: 20px; ">
+                    <source src="freida.mp4" type="video/mp4">
+                </video>
+
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <p style="font-size: 50px; text-align: center;">Website concept reimagined [2024]</p>
+                </div>
+            </div>
+            </a>
+            
+        </div>
+
+        <div>
+            <a href="posters.html">
+            <div style="position: relative;">
+                <video autoplay loop muted playsinline class="bg-video" style="width: 100%; height: auto; filter: opacity(30%); margin-top: 20px; ">
+                    <source src="posters.mp4" type="video/mp4">
+                </video>
+
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <p style="font-size: 50px; text-align: center;">Ananya's Pinterest | Creative Design Concepts [2024-2026]</p>
+                </div>
+            </div>
+            </a>
+            
+        </div>
+
+        <div id="foot" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 50px;">
             <div>
-                <img src="Group 1303.png" style="width: 400px; height: auto;">
+                <a href="https://www.behance.net/ananyaganjoo" target="_blank"><p>Behance ➔</p></a>
+                <a href="https://dribbble.com/ananyaganjoo-ux" target="_blank"><p>Dribble ➔</p></a>
+                <a href="https://www.instagram.com/designanya.indd?igsh=ZHNyZDJ4aXo5b205" target="_blank"><p>Instagram ➔</p></a>
             </div>
-            <div style="display: flex; flex-direction: column;">
-                <div>
-                    <p style="width: 600px; height: auto; padding: 10px; font-size: 20px;">
-                        Currently studying CSE with a focus on AI, I'm passionate about creating intuitive designs
-                        that improve user experiences. <br> <br>
-                        I love blending creativity with problem-solving to craft meaningful,
-                        user-friendly designs. Always excited to learn and explore new challenges,
-                        I'm eager to connect and create something amazing!</p>
-                </div>
-                <div style="padding: 10px;">
-                    <img src="be.png" style="padding-right: 5px;" width="20px" height="auto"> <a
-                        href="https://www.behance.net/ananyaganjoo" target="_blank">Behance</a><br>
-                    <img src="Dribbble.png" style="padding-right: 5px;" width="20px" height="auto"> <a
-                        href="https://dribbble.com/ananyaganjoo-ux" target="_blank">Dribbble</a><br>
-                    <img src="lin.png" style="padding-right: 5px;" width="20px" height="auto"> <a
-                        href="https://www.linkedin.com/in/ganjooananya2003" target="_blank">Linkedin</a><br>
-                    <img src="mail.png" style="padding-right: 5px;" width="20px" height="auto"> <a
-                        href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com"
-                        target="_blank">Gmail</a><br>
-                    <img src="doc.png" style="padding-right: 5px;" width="20px" height="auto">
-                    <a href="AnanyaGanjoo'sResume.pdf" download="Ananya_Ganjoo_Resume.pdf" target="_blank">Download my
-                        Resume</a><br>
-                </div>
+
+            <div>
+                <p>📍 Delhi, India</p>
+                <a href="me.html"><p>Who am I ➔</p></a>
+            </div>
+
+            <div>
+                <a href="https://www.linkedin.com/in/ganjooananya2003" target="_blank"><p>LinkedIn ➔</p></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=ananyaganjoo.ux@gmail.com" target="_blank"><p>Email ➔</p></a>
+                <a href="AnanyaGanjoo_Resume.pdf" target="_blank"><p>Resume ➔</p></a>
             </div>
         </div>
 
-
+ 
+         <div class="copy">
+            <p style="text-align: center; padding: 20px; font-size: 18px;">© 2026 Ananya Ganjoo. All rights reserved.</p>
+        </div>
 
     </div>
+       
+        
